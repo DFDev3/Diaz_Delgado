@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -22,6 +23,22 @@ public class MainActivity extends AppCompatActivity {
         LoadData();
         rvprods = findViewById(R.id.rv);
         CustomAdapter myAdapter = new CustomAdapter(prodList);
+        myAdapter.setOnItemClickListener(new CustomAdapter.onItemClickListener() {
+            @Override
+            public void onItemClick(Producto myprod, int posicion) {
+                Toast.makeText(MainActivity.this, "Clic"+myprod.getNombre(), Toast.LENGTH_SHORT).show();
+            }
+            @Override
+            public void onItemBtnClick(Producto myprod, int posicion) {
+                prodList.remove(posicion);
+                myAdapter.setDataSet(prodList);
+                Toast.makeText(MainActivity.this, "Clic BOTON"+myprod.getNombre(), Toast.LENGTH_SHORT).show();
+            }
+
+
+
+
+        });
 
         rvprods.setAdapter(myAdapter);
         rvprods.setLayoutManager(new LinearLayoutManager(this));
@@ -31,10 +48,10 @@ public class MainActivity extends AppCompatActivity {
         Producto prod = new Producto();
         prod.setNombre("Computador HP");
         prod.setPrecio(3000000.0);
-        prod.setUrlImg("https://d34vmoxq6ylzee.cloudfront.net/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/4/3/43K30LT-1_T1646844157.png");
+        prod.setUrlImg("https://www.bitbol.la/files/image/51/51647/636d05b1b1d95.jpg");
 
-        Producto prod1 = new Producto("Keyboard", 200000.0, "https://i.dell.com/is/image/DellContent/content/dam/images/products/electronics-and-accessories/dell/keyboards/kb500/kb500-kbm-02-bk.psd?fmt=pjpg&pscan=auto&scl=1&hei=402&wid=852&qlt=100,1&resMode=sharp2&size=852,402&chrss=full");
-        Producto prod2 = new Producto("Mouse", 150000.0, "https://liquimarcas.co/wp-content/uploads/2021/05/mouse-gamer-usb-havit-ms1018-1.jpg");
+        Producto prod1 = new Producto("Keyboard", 200000.0, "https://www.bitbol.la/files/image/51/51647/636d05b1b1d95.jpg");
+        Producto prod2 = new Producto("Mouse", 150000.0, "https://www.bitbol.la/files/image/51/51647/636d05b1b1d95.jpg");
 
         prodList = new ArrayList<>();
         prodList.add(prod);

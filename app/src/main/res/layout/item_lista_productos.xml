@@ -7,8 +7,8 @@
 
     <ImageView
         android:id="@+id/iv_url"
-        android:layout_width="wrap_content"
-        android:layout_height="108dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_marginTop="19dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -43,6 +43,19 @@
         android:textAlignment="viewStart"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_url"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+    <Button
+        android:id="@+id/btn_eliminar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="4dp"
+        android:text="@string/eliminar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.908"
         app:layout_constraintStart_toEndOf="@+id/iv_url"
         app:layout_constraintTop_toBottomOf="@+id/tv_name" />
 </androidx.constraintlayout.widget.ConstraintLayout>
