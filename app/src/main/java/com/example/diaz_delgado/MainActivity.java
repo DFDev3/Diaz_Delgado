@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -19,20 +20,22 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        setTitle(getString(R.string.listprodtitle));
         LoadData();
         rvprods = findViewById(R.id.rv);
         CustomAdapter myAdapter = new CustomAdapter(prodList);
         myAdapter.setOnItemClickListener(new CustomAdapter.onItemClickListener() {
             @Override
             public void onItemClick(Producto myprod, int posicion) {
-                Toast.makeText(MainActivity.this, "Clic"+myprod.getNombre(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this,Detalle.class);
+                intent.putExtra("Producto",myprod);
+                startActivity(intent);
             }
             @Override
             public void onItemBtnClick(Producto myprod, int posicion) {
                 prodList.remove(posicion);
                 myAdapter.setDataSet(prodList);
-                Toast.makeText(MainActivity.this, "Clic BOTON"+myprod.getNombre(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, getString(R.string.clicbtn)+myprod.getNombre(), Toast.LENGTH_SHORT).show();
             }
 
 

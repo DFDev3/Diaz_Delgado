@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Diaz_Delgado</string>
     <string name="eliminar">Eliminar</string>
+    <string name="listprodtitle">listado de productos</string>
+    <string name="DetalleTitle">Detalle Producto</string>
+    <string name="clic">Clic</string>
+    <string name="clicbtn">Click BOTON</string>
 </resources>
