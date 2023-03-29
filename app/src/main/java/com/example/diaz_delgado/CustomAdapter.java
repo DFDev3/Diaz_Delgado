@@ -22,13 +22,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     private onItemClickListener onItemClickListener;
 
     public void setDataSet(ArrayList<Producto> dataSet) {
-        DataSet = dataSet;
-        notifyDataSetChanged();
-    }
+            DataSet = dataSet;
+            notifyDataSetChanged();
+        }
 
     public CustomAdapter(ArrayList<Producto> dataSet) {
-        DataSet = dataSet;
-        this.onItemClickListener = null;
+            DataSet = dataSet;
+            this.onItemClickListener = null;
     }
 
     public void setOnItemClickListener(CustomAdapter.onItemClickListener onItemClickListener) {

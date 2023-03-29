@@ -37,10 +37,6 @@ public class MainActivity extends AppCompatActivity {
                 myAdapter.setDataSet(prodList);
                 Toast.makeText(MainActivity.this, getString(R.string.clicbtn)+myprod.getNombre(), Toast.LENGTH_SHORT).show();
             }
-
-
-
-
         });
 
         rvprods.setAdapter(myAdapter);

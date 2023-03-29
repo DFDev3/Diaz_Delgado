@@ -5,4 +5,5 @@
     <string name="DetalleTitle">Detalle Producto</string>
     <string name="clic">Clic</string>
     <string name="clicbtn">Click BOTON</string>
+    <string name="agregar_produc_to">Agregar Produc to</string>
 </resources>
