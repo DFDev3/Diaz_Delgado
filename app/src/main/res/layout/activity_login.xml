@@ -18,25 +18,25 @@
         tools:layout_editor_absoluteX="1dp">
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/eduserlogin"
             android:layout_width="244dp"
             android:layout_height="59dp"
             android:layout_marginStart="100dp"
-            android:layout_marginTop="50dp"
             android:layout_marginEnd="101dp"
-            android:layout_marginBottom="64dp"
+            android:layout_marginBottom="40dp"
             android:background="@drawable/editext_shape"
             android:ems="10"
             android:hint="User"
             android:inputType="textPersonName"
+            android:textAlignment="center"
             android:textColor="#FFFFFF"
-            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
+            app:layout_constraintBottom_toTopOf="@+id/edpasswordlogin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName2"
+            android:id="@+id/edpasswordlogin"
             android:layout_width="244dp"
             android:layout_height="54dp"
             android:layout_marginStart="100dp"
@@ -46,38 +46,46 @@
             android:ems="10"
             android:hint="Password"
             android:inputType="textPersonName"
+            android:textAlignment="center"
             android:textColor="#FFFFFF"
             app:layout_constraintBottom_toTopOf="@+id/button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+            app:layout_constraintTop_toBottomOf="@+id/eduserlogin" />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="179dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="60dp"
             android:layout_marginEnd="175dp"
+            android:layout_marginBottom="32dp"
             android:text="LOGIN"
             android:textColor="#FFFFFF"
             android:textSize="24sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+            app:layout_constraintBottom_toTopOf="@+id/eduserlogin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.666"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:background="@drawable/button_shape"
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="161dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="162dp"
+            android:layout_marginBottom="98dp"
+            android:background="@drawable/button_shape"
+            android:onClick="clicLogin"
             android:text="Ingresar"
-            tools:layout_editor_absoluteX="151dp"
-            tools:layout_editor_absoluteY="350dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edpasswordlogin" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
@@ -87,7 +95,6 @@
         android:layout_marginTop="16dp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_launcher_background" />
 </androidx.constraintlayout.widget.ConstraintLayout>

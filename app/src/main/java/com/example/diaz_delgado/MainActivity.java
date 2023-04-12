@@ -5,7 +5,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -56,5 +58,14 @@ public class MainActivity extends AppCompatActivity {
         prodList.add(prod);
         prodList.add(prod1);
         prodList.add(prod2);
+    }
+
+    public void clicLogout(View view){
+        SharedPreferences preferences = getSharedPreferences("Tienda_App",0);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.clear();
+        editor.apply();
+
+        startActivity(new Intent(this,LoginActivity.class));
     }
 }
