@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
     private EditText User,Password;
-    private SharedPreferences preferences;
+    private SharedPreferences preferences;  
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

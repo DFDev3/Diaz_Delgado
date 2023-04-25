@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "469423219004",
+    "project_id": "diazdelgado-b5b1f",
+    "storage_bucket": "diazdelgado-b5b1f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:469423219004:android:25dd8cc667b5c352583e39",
+        "android_client_info": {
+          "package_name": "com.example.diaz_delgado"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "469423219004-3qinaudstgl2u71s1vl86ii429s6mnfp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQjziMsqC92JBwLWkKwNbxbqJ7J52t4r8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "469423219004-3qinaudstgl2u71s1vl86ii429s6mnfp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
